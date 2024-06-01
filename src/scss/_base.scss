@@ -1,0 +1,32 @@
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 64px;
+  padding: 30px 108px 30px 30px;
+  font-family: var(--font-family);
+  color: var(--white-color);
+  background-color: var(--fiol-bg);
+  overflow: hidden;
+
+  @media (max-width: $breakpoint1450) {
+    padding: 30px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    padding: 20px;
+  }
+}
+
+.main-content {
+  flex: 1 1 auto;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 14px;
+  border-radius: 18px;
+  padding: 16px;
+  background: linear-gradient(135deg, #b66dff 0%, #5b38e7 100%);
+}

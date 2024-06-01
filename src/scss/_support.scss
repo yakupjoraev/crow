@@ -1,0 +1,161 @@
+.support {
+
+  // .support__rows
+
+  &__rows {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+
+  // .support__row
+
+  &__row {}
+
+  // .support__group
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    border: 1px solid #352146;
+    border-radius: 10px;
+    padding: 24px;
+    background-color: #1a0f23;
+    transition: border 0.2s linear;
+
+    &:has(>.support__input:hover) {
+      border-color: #6d4af7;
+    }
+
+    &:has(>.support__input:active) {
+      border-color: #6d4af7;
+    }
+
+    &:has(>.support__input:focus) {
+      border-color: #6d4af7;
+    }
+
+
+    @media (max-width: $breakpoint768) {
+      padding: 12px;
+    }
+  }
+
+  // .support__group-head
+
+  &__group-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #352146;
+  }
+
+  // .support__group-plus
+
+  &__group-plus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+  }
+
+  // .support__Label
+
+  &__Label {
+    display: inline-flex;
+
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+  }
+
+  // .support__input
+
+  &__input {
+    padding: 12px 0;
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: #fff;
+
+    &::placeholder {
+      font-family: var(--font-family);
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 150%;
+      color: #7e7e81;
+    }
+
+
+    @media (max-width: $breakpoint768) {
+      font-size: 18px;
+
+      &::placeholder {
+        font-size: 18px;
+      }
+    }
+  }
+
+  // .support__input--textarea
+
+  &__input--textarea {
+    resize: none;
+    height: 72px;
+  }
+
+  // .support__btn
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+    width: 168px;
+    height: 90px;
+    border: 0;
+    outline: 0;
+    border-radius: 12px;
+    background-color: #7f60f9;
+    transition: background-color 0.2s linear;
+
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: #fff;
+
+    img {
+      transition: transform 0.2s linear;
+    }
+
+    @media (hover:hover) {
+      &:hover {
+        background-color: #6d4af7;
+
+        img {
+          transform: translateX(3px);
+        }
+      }
+    }
+
+
+
+    @media (max-width: $breakpoint768) {
+      width: 100%;
+      height: 72px;
+      column-gap: 16px;
+    }
+  }
+}

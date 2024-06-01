@@ -1,0 +1,242 @@
+.create-cast {
+
+  // .create-cast__content
+
+  &__content {}
+
+  // .create-cast__rows
+
+  &__rows {}
+}
+
+.support {
+
+  // .support__tags
+
+  &__tags {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+  }
+
+  // .support__tags-counter
+
+  &__tags-counter {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .support__tags-counter-label
+
+  &__tags-counter-label {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: center;
+    color: #fff;
+
+
+    @media (max-width: $breakpoint768) {
+      font-size: 16px;
+    }
+  }
+
+  // .support__tags-counter-sums
+
+  &__tags-counter-sums {
+    display: flex;
+    align-items: center;
+    column-gap: 2px;
+  }
+
+  // .support__tags-counter-sum
+
+  &__tags-counter-sum {
+    color: rgba(255, 255, 255, 0.2);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+
+
+    @media (max-width: $breakpoint768) {
+      font-size: 16px;
+    }
+  }
+
+  // .support__tags-counter-sum--active
+
+  &__tags-counter-sum--active {
+    color: #fff;
+  }
+
+  // .support__tags-list
+
+  &__tags-list {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    row-gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  // .support__tags-item
+
+  &__tags-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    border-radius: 16px;
+    padding: 4px 10px;
+    background-color: #fff;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    text-align: center;
+    color: #fff;
+  }
+
+  // .support__tags-item--grey
+
+  &__tags-item--grey {
+    color: #326c8b;
+
+    &.support__tags-item--active {
+      background-color: #326c8b;
+      color: #fff;
+    }
+  }
+
+  // .support__tags-item--active
+
+  &__tags-item--active {}
+
+  // .support__tags-item--blue
+
+  &__tags-item--blue {
+    color: #3538cd;
+
+    &.support__tags-item--active {
+      background-color: #3538cd;
+      color: #fff;
+    }
+  }
+
+  // .support__tags-item--orange
+
+  &__tags-item--orange {
+    color: #c4320a;
+
+    &.support__tags-item--active {
+      background-color: #c4320a;
+      color: #fff;
+    }
+  }
+
+  // .support__price-wrapper
+
+  &__price-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: column;
+      row-gap: 24px;
+      align-items: flex-start;
+    }
+  }
+
+  // .support__price
+
+  &__price {
+    flex: 0 0 328px;
+    display: flex;
+    align-items: center;
+    height: 90px;
+    border: 1px solid #352146;
+    border-radius: 10px;
+    padding: 24px;
+    background-color: #1a0f23;
+
+
+    @media (max-width: $breakpoint768) {
+      flex: 0 1 auto;
+      width: 100%;
+      height: 60px;
+      padding: 12px 20px;
+    }
+  }
+
+  // .support__price-text
+
+  &__price-text {
+    padding-right: 20px;
+    margin-right: 20px;
+    border-right: 1px solid #352146;
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  // .support__price-input
+
+  &__price-input {
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    color: #7f60f9;
+  }
+
+  // .support__publish
+
+  &__publish {
+    flex: 0 1 870px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+    background-color: #7f60f9;
+    border-radius: 10px;
+    height: 90px;
+    padding: 16px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    color: #fff;
+
+    transition: background 0.2s linear;
+
+
+    img {
+      transition: transform 0.2s linear;
+    }
+
+    @media (hover:hover) {
+      &:hover {
+        background-color: #6d4af7;
+
+        img {
+          transform: translateX(3px);
+        }
+      }
+    }
+
+
+
+    @media (max-width: $breakpoint768) {
+      flex: 0 1 auto;
+      width: 100%;
+      height: 60px;
+    }
+  }
+
+}
