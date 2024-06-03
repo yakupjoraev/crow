@@ -1,4 +1,26 @@
 // ************************ Модальное окно ************************ //
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  backdrop-filter: blur(60px);
+  background: rgba(50, 26, 68, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  animation: fade 0.3s linear;
+}
+
+.modal.show {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  opacity: 1;
+}
 
 .modal {
 
@@ -6,7 +28,20 @@
 
   &__wrapper {
     max-width: 1340px;
+    width: 100%;
+    margin-left: 232px;
+    margin-right: 108px;
+    padding: 60px 0 20px;
     overflow: hidden;
+
+    @media (max-width: $breakpoint1450) {
+      margin-left: 160px;
+      margin-right: 60px;
+    }
+
+    @media (max-width: $breakpoint992) {
+      margin: 0;
+    }
   }
 
   // .modal__form

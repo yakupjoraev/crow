@@ -22,6 +22,12 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  background-color: var(--fiol-bg);
+  scrollbar-gutter: stable;
+}
+
 // Body Locked
 body {
   &.locked {

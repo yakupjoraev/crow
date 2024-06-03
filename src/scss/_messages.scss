@@ -117,6 +117,14 @@
     column-gap: 12px;
     border-radius: 12px;
     padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+
+    @media (hover:hover) {
+      &:hover {
+        background-color: #0a0513;
+      }
+    }
 
     &.active {
       background-color: #0a0513;
@@ -301,4 +309,103 @@
       font-size: 16px;
     }
   }
+}
+
+.modal--messages-mini {
+  background: rgba(10, 5, 19, 0.5);
+  backdrop-filter: none;
+
+  .modal__body {
+    background-color: transparent;
+  }
+
+  @media (max-width: 1200px) {
+    .modal__body {
+      padding: 0 0 20px 0;
+    }
+  }
+
+
+}
+
+.messages--mini {
+  display: grid;
+  grid-template-columns: 450px 1fr 74px;
+  column-gap: 0;
+
+  @media (max-width: $breakpoint1450) {
+    grid-template-columns: 320px 1fr 74px;
+  }
+
+  @media (max-width: 1200px) {
+    grid-template-columns: 320px 1fr;
+
+    .messages__dialog {
+      order: 2;
+    }
+
+    .messages__chat {
+      order: 3;
+    }
+  }
+
+  @media (max-width: $breakpoint992) {
+    column-gap: 0;
+    row-gap: 12px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 0;
+  }
+
+}
+
+.modal__close--footer {
+  margin-left: 14px;
+  margin-top: auto;
+  width: 74px;
+  height: 74px;
+
+  border-radius: 13px;
+  background-color: #fff;
+
+  @media (hover:hover) {
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  img {
+    width: 34px;
+    height: 34px;
+    filter: brightness(0) saturate(100%) invert(42%) sepia(28%) saturate(7353%) hue-rotate(234deg) brightness(101%) contrast(95%);
+    transition: transform 0.2s linear;
+  }
+
+
+  @media (max-width: 1200px) {
+    order: 1;
+    grid-column: span 2;
+    margin-top: 0;
+    margin-left: auto;
+    margin-bottom: 20px;
+    width: 60px;
+    height: 60px;
+  }
+
+  @media (max-width: $breakpoint992) {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $breakpoint768) {
+    grid-column: span 1;
+    margin-bottom: 12px;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+
 }
