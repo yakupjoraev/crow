@@ -6,10 +6,11 @@
   font-family: var(--font-family);
   color: var(--white-color);
   background-color: var(--fiol-bg);
-  overflow: hidden;
+  // overflow: hidden;
 
   @media (max-width: $breakpoint1450) {
     padding: 30px;
+    overflow: hidden;
   }
 
   @media (max-width: $breakpoint768) {

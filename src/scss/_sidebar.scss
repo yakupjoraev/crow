@@ -1,5 +1,6 @@
 .sidebar {
-  position: relative;
+  position: sticky;
+  top: 30px;
   z-index: 101;
   flex: 0 0 136px;
   width: 136px;
@@ -128,8 +129,11 @@
   // .sidebar__border
 
   &__border {
+    max-width: 78px;
+    width: 100%;
+    margin: 0 auto;
     border: 1px solid #d0d5dd;
-    opacity: 0.2s;
+    opacity: 0.2;
   }
 
   // .sidebar__list

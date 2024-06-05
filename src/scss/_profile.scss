@@ -82,6 +82,10 @@
     line-height: 120%;
     color: #fff;
 
+    &~.profile__user-token {
+      margin-top: 24px;
+    }
+
     @media (max-width: $breakpoint768) {
       font-size: 24px;
     }
