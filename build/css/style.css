@@ -681,7 +681,10 @@ body.locked {
 }
 
 .screen-header__tg {
-  position: relative;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3017,6 +3020,19 @@ body.locked {
     min-width: -webkit-fit-content;
     min-width: -moz-fit-content;
     min-width: fit-content;
+  }
+
+  .screen-header__tg {
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+  }
+
+  .screen-main__aside-btn {
+    min-height: 70px;
+    border-radius: 12px;
+    font-size: 24px;
   }
 
   .screen-main__form {
